@@ -1,0 +1,99 @@
+const int led1 = 13;
+const int led2 = 12;
+const int led3 = 11;
+const int led4 = 10;
+
+int inputPin1 = 9; 
+int inputPin2 = 8;
+
+int kondisiInputPin1 = 0; 
+int kondisiInputPin2 = 0;
+
+void setup()
+// memberikan status pin menjadi output atau input
+{
+  
+   pinMode(led1, OUTPUT);
+   pinMode(led2, OUTPUT);
+   pinMode(led3, OUTPUT);
+   pinMode(led4, OUTPUT);
+
+
+
+}
+void loop()
+{
+  
+   kondisiInputPin1 = digitalRead(inputPin1);
+   kondisiInputPin2 = digitalRead(inputPin2);
+   if (kondisiInputPin1 == 0 && kondisiInputPin2 == 0) // jika tombol pin 2 ditekan
+   {
+      digitalWrite(led1,LOW); // LED pin 10 mati
+      digitalWrite(led2,LOW); // LED pin 11 mati
+      digitalWrite(led3,LOW); // LED pin 12 mati
+      digitalWrite(led4,LOW); // LED pin 13 mati
+   }
+  else if (kondisiInputPin1 == 0 && kondisiInputPin2 == 1)// jika tombol pin 3 ditekan
+    {
+      digitalWrite(led1, LOW);
+      digitalWrite(led2, LOW);
+      digitalWrite(led3, LOW);
+      digitalWrite(led4, HIGH);
+      delay(500);
+      digitalWrite(led1, LOW);
+      digitalWrite(led2, LOW);
+      digitalWrite(led3, HIGH);
+      digitalWrite(led4, LOW);
+      delay(500);
+      digitalWrite(led1, LOW);
+      digitalWrite(led2, HIGH);
+      digitalWrite(led3, LOW);
+      digitalWrite(led4, LOW);
+      delay(500);
+      digitalWrite(led1, HIGH);
+      digitalWrite(led2, LOW);
+      digitalWrite(led3, LOW);
+      digitalWrite(led4, LOW);
+      delay(500);
+    }
+  else if(kondisiInputPin1 == 1 && kondisiInputPin2 == 0)// jika tombol pin 3 ditekan
+    {
+      digitalWrite(led1, HIGH);
+      digitalWrite(led2, HIGH);
+      digitalWrite(led3, HIGH);
+      digitalWrite(led4, HIGH);
+      delay(500);
+      digitalWrite(led1, LOW);
+      digitalWrite(led2, LOW);
+      digitalWrite(led3, LOW);
+      digitalWrite(led4, LOW);
+      delay(500);
+    }
+ else if (kondisiInputPin1 == 1 && kondisiInputPin2 == 1) // 
+    {
+      digitalWrite(led1, HIGH);
+      digitalWrite(led2, LOW);
+      digitalWrite(led3, LOW);
+      digitalWrite(led4, LOW);
+      delay(500);
+      digitalWrite(led1, LOW);
+      digitalWrite(led2, HIGH);
+      digitalWrite(led3, LOW);
+      digitalWrite(led4, LOW);
+      delay(500);
+      digitalWrite(led1, LOW);
+      digitalWrite(led2, LOW);
+      digitalWrite(led3, HIGH);
+      digitalWrite(led4, LOW);
+      delay(500);
+      digitalWrite(led1, LOW);
+      digitalWrite(led2, LOW);
+      digitalWrite(led3, LOW);
+      digitalWrite(led4, HIGH);
+      delay(500);
+     
+    }
+   
+ 
+}   
+   // KODE PUNYA ADI IVANI YUSUF DONT MODIFY THIS,IF YOU DONT HAVE PERMISION @AIXY_NOMERCY
